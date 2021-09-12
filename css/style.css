@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  --mainColor: #009671;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+body {
+  background: var(--mainColor);
+  font-weight: 500;
+}
+.select_Box,
+.play_Card,
+.result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+.select_Box,
+.result-box {
+  box-shadow: 5px 5px 6px 3px #00000033;
+}
+
+/* The first Card */
+.select_Box {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.select_Box.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+header {
+  font-size: 42px;
+  border-bottom: solid #dadada 1px;
+}
+.content {
+  line-height: 1.9em;
+  margin-top: 10px;
+  font-size: 25px;
+}
+button {
+  font-size: 25px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: var(--mainColor, deepskyblue);
+  color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 4px 3px 7px 2px #00000033;
+  margin: 10px;
+}
+.player_x,
+.player_o {
+  margin-right: 30px;
+  margin: 10px;
+}
+button:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+/* The Playing card */
+.play_Card {
+  opacity: 0;
+  pointer-events: none;
+}
+.play_Card.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.details {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.details .players {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.players span {
+  font-size: 22px;
+  color: var(--mainColor, deepskyblue);
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  position: relative;
+  z-index: 2;
+  transform: all 0.2s ease;
+}
+.details .players span:first-child {
+  color: #fff;
+}
+.players .slider {
+  background: var(--mainColor, deepskyblue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: 5px;
+  z-index: 1;
+  transform: all 0.2s ease;
+}
+.players.active span:first-child {
+  color: var(--mainColor, deepskyblue);
+}
+.players.active span:nth-child(2) {
+  color: #fff;
+}
+.players.active .slider {
+  left: 50%;
+}
+.playBoard section {
+  display: flex;
+}
+.playBoard section span {
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  border-radius: 10px;
+  background: #fff;
+  display: block;
+  color: var(--mainColor, deepskyblue);
+  text-align: center;
+  line-height: 80px;
+  font-size: 50px;
+  transform: all 0.2s ease;
+}
+.playBoard {
+  margin-top: 10px;
+}
+
+/* The resultes card */
+.result-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.result-box.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.won-text {
+  font-size: 25px;
+  text-align: center;
+}
+.won-text p {
+  display: inline;
+}
+.result-box .btn {
+  text-align: center;
+  margin-top: 15px;
+}
+footer {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 130px;
+  box-shadow: 5px 3px 5px 3px #00000033;
+}
+footer a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+@media (max-width: 505px) {
+  footer {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+  }
+  button,
+  .title {
+    font-size: 15px;
+    margin: 3px;
+  }
+  header {
+    font-size: 22px;
+  }
+}

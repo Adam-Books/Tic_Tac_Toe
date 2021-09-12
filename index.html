@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <!-- The first Card -->
+    <div id="selectBox" class="select_Box">
+        <header class="header">Tic Tac Toe</header>
+        <div class="content">
+            <div class="title">Select Witch Player You Want?</div>
+            <div class="options">
+                <button id="selectX" class="player_x">Player X</button>
+                <button id="selectO" class="player_o">Player O</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Playing card -->
+    <div id="playBoard" class="play_Card">
+
+        <div class="details">
+            <div id="players" class="players">
+                <span class="xturn">X's Turn</span>
+                <span class="xturn">O's Turn</span>
+                <div class="slider"></div>
+            </div>
+        </div>
+
+        <div class="playBoard">
+            <section>
+                <span class="box1"></span>
+                <span class="box2"></span>
+                <span class="box3"></span>
+            </section>
+            <section>
+                <span class="box4"></span>
+                <span class="box5"></span>
+                <span class="box6"></span>
+            </section>
+            <section>
+                <span class="box7"></span>
+                <span class="box8"></span>
+                <span class="box9"></span>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- The resultes card -->
+    <div id="winningBox" class="result-box">
+        <div id="winningText" class="won-text">Player <p>X</p> Won The Game!</div>
+        <div class="btn">
+            <button id="replayBtn" class="replayBtn">Replay</button>
+        </div>
+    </div>
+    <footer>&copy; Made by <span>
+        <a href="https://github.com/Adam-Books">Adam Mohammed</a>
+    </span></footer>
+</body>
+</html>
