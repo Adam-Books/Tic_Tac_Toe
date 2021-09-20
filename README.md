@@ -1,5 +1,5 @@
 ## Tic_Tac_Toe
-Simple Tic Tac Toe using pure JavaScript.
+Simple Tic Tac Toe using Vanilla JavaScript.
 
 ## Links
 This is The DEMO: [Tic_Tac_Toe](https://adam-books.github.io/Tic_Tac_Toe/) 
